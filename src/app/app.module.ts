@@ -29,7 +29,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { EventCreateComponent } from './event-create/event-create.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-MatNativeDateModule
+import {MatNativeDateModule} from '@angular/material/core';
+
 
 @NgModule({
   declarations: [

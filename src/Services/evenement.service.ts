@@ -22,7 +22,7 @@ AddEvents(e: Evenement): Observable<void> {
   return this.httpClient.post<void>('http://localhost:3000/evenements',e);
 }
 
-  update(id: string, e: Evenement): Observable<void> {
+  update(id: String, e: Evenement): Observable<void> {
     return this.httpClient.put<void>(`http://localhost:3000/evenements/${id}`, e);
   }
 
