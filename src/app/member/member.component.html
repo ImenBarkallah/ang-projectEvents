@@ -1,0 +1,65 @@
+ <button routerLink="/create"  mat-raised-button color="primary" style="margin-bottom: 16px;">Create New</button>
+<!--affichage du tableau de membre-->
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="1">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="2">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Cin Column -->
+  <ng-container matColumnDef="3">
+    <th mat-header-cell *matHeaderCellDef> Cin </th>
+    <td mat-cell *matCellDef="let element"> {{element.cin}} </td>
+  </ng-container>
+
+  <!-- Cv Column -->
+  <ng-container matColumnDef="4">
+    <th mat-header-cell *matHeaderCellDef> Cv </th>
+    <td mat-cell *matCellDef="let element"> {{element.cv}} </td>
+  </ng-container>
+
+  <!-- Type Column -->
+  <ng-container matColumnDef="5">
+    <th mat-header-cell *matHeaderCellDef> Type </th>
+    <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+  </ng-container>
+  <!-- Date Column -->
+  <ng-container matColumnDef="6">
+    <th mat-header-cell *matHeaderCellDef> Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.createddate}} </td>
+  </ng-container>
+<!-- Action Column -->
+  <ng-container matColumnDef="7">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let element">
+    <button mat-icon-button routerLink="/edit/{{element.id}}" matTooltip="Edit Member">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button 
+  mat-icon-button 
+  color="warn"
+  matTooltip="Delete Member"
+  (click)="deleteMember(element.id)">
+
+  <mat-icon>delete</mat-icon>
+
+</button>
+
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+

@@ -1,0 +1,47 @@
+<mat-dialog-content [formGroup]="form">
+
+  <mat-form-field>
+    <input matInput
+           placeholder="Event ID"
+           formControlName="id">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <input matInput
+           placeholder="Title"
+           formControlName="titre">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <input matInput
+           placeholder="Start Date"
+           formControlName="dateDebut"
+           type="date">
+  </mat-form-field>
+    <br>
+
+  <mat-form-field>
+    <input matInput
+           placeholder="End Date"
+           formControlName="dateFin"
+           type="date">
+  </mat-form-field>
+    <br>
+
+
+  <mat-form-field>
+    <input matInput
+           placeholder="Location"
+           formControlName="lieu">
+  </mat-form-field>
+    <br>
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-raised-button (click)="close()">Close</button>
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+</mat-dialog-actions>

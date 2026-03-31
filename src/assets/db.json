@@ -1,0 +1,52 @@
+{
+  "members": [
+    {
+      "id": "1",
+      "name": "Imen",
+      "cin": "1119873",
+      "type": "teacher",
+      "createddate": "2001-04-20",
+      "cv": "lien"
+    },
+    {
+      "id": "2",
+      "name": "Nour",
+      "cin": "1117412",
+      "type": "student",
+      "createddate": "2002-07-10",
+      "cv": "lien"
+    },
+    {
+      "id": "3",
+      "name": "Eya",
+      "cin": "1113420",
+      "type": "student",
+      "createddate": "2005-01-03",
+      "cv": "lien"
+    },
+    {
+      "id": "cde2",
+      "name": "testttt",
+      "cin": "1152034",
+      "type": "test",
+      "createddate": "2006-05-05",
+      "cv": "cv"
+    }
+  ],
+  "evenements": [
+    {
+      "id": "12345",
+      "titre": "conf",
+      "dateDebut": "12/12",
+      "dateFin": "12/4",
+      "lieu": "Sfax"
+    },
+    {
+      "id": "456",
+      "titre": "testTitre",
+      "dateDebut": "10/10",
+      "dateFin": "12/9",
+      "lieu": "Sfax"
+    }
+  ]
+}
