@@ -6,12 +6,13 @@ import { ArticlesComponent } from './articles/articles.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ToolsComponent } from './tools/tools.component';
 import { EventsComponent } from './events/events.component';
+import { LoginComponent } from './login/login.component';
 
 //faire la correspondance entre le path et le compo
 const routes: Routes = [
   {path:'',
     pathMatch:"full",
-    component:MemberComponent},
+    component:LoginComponent},
   {path:'create',
     pathMatch:"full",//matching complet
     component:MemberFormComponent

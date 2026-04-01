@@ -30,6 +30,11 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { EventCreateComponent } from './event-create/event-create.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import { firebaseConfig } from './environment';
+import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFireAuthModule} from '@angular/fire/compat/auth';
+import { LoginComponent } from './login/login.component';
+
 
 
 @NgModule({
@@ -43,7 +48,8 @@ import {MatNativeDateModule} from '@angular/material/core';
     ArticlesComponent,
     EventsComponent,
     ConfirmComponent,
-    EventCreateComponent
+    EventCreateComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +72,9 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatSortModule,
     MatTooltipModule,
     MatNativeDateModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
